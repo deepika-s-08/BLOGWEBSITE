@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Login Page -->
+    <div id="loginPage">
+        <div class="login-box">
+            <div class="logo">MiniConnect</div>
+            <p>Connect. Share. Follow.</p>
+
+            <input type="text" id="username" placeholder="Enter username">
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button class="login-btn" onclick="login()">Login</button>
+            <p id="error"></p>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app">
+        <header>
+            <h2>MiniConnect</h2>
+            <button onclick="logout()">Logout</button>
+        </header>
+
+        <div class="container">
+
+            <!-- Profile -->
+            <div class="card profile">
+                <div class="avatar" id="avatar">D</div>
+                <h3 id="profileName">DEEPIKA</h3>
+                <p>@DEEPI</p>
+
+                <div class="stats">
+                    <div>
+                        <b id="followers">125</b>
+                        Followers
+                    </div>
+                    <div>
+                        <b id="following">80</b>
+                        Following
+                    </div>
+                </div>
+            </div>
+
+            <!-- Posts Section -->
+            <div>
+                <div class="card">
+                    <h3>Create Post</h3>
+                    <textarea id="postText" placeholder="What's happening?"></textarea>
+                    <button class="post-btn" onclick="addPost()">Post</button>
+                </div>
+
+                <div class="card">
+                    <h3>Home</h3>
+                    <div id="posts">
+
+                        <div class="post">
+                            <h3>Alex</h3>
+                            <p>Welcome to MiniConnect! This is my first post.</p>
+                            <div class="actions">
+                                <button onclick="likePost(this)">❤️ Like <span>0</span></button>
+                                <button onclick="commentPost()">💬 Comment</button>
+                                <button onclick="sharePost()">🔁 Share</button>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <h3>Sarah</h3>
+                            <p>Learning web development is really interesting!</p>
+                            <div class="actions">
+                                <button onclick="likePost(this)">❤️ Like <span>0</span></button>
+                                <button onclick="commentPost()">💬 Comment</button>
+                                <button onclick="sharePost()">🔁 Share</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Follow Section -->
+            <div class="card">
+                <h3>Who to Follow</h3>
+
+                <p><b>Arun</b></p>
+                <button class="follow-btn" onclick="followUser(this)">Follow</button>
+
+                <hr>
+
+                <p><b>Priya</b></p>
+                <button class="follow-btn" onclick="followUser(this)">Follow</button>
+
+                <hr>
+
+                <p><b>Rahul</b></p>
+                <button class="follow-btn" onclick="followUser(this)">Follow</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
